@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:todo_list/task.dart';
 
 class HomePage extends StatefulWidget {
