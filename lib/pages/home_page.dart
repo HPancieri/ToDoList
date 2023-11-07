@@ -75,18 +75,22 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 IconButton(
-                    onPressed: () {
-                      setState(() {
-                        String msg = controller.text;
-                        if (msg != '') {
-                          taskList.add(Task(
-                              completion: false, message: controller.text));
-                        }
-                      });
-                      controller.clear();
-                      _saveState();
-                    },
-                    icon: const Icon(Icons.add_box_rounded)),
+                  onPressed: () {
+                    setState(() {
+                      String msg = controller.text;
+                      if (msg != '') {
+                        taskList.add(
+                            Task(completion: false, message: controller.text));
+                      }
+                    });
+                    controller.clear();
+                    _saveState();
+                  },
+                  icon: const Icon(
+                    Icons.add_circle_rounded,
+                    size: 30,
+                  ),
+                ),
                 Expanded(
                   child: TextField(
                     controller: controller,
@@ -120,8 +124,8 @@ class _HomePageState extends State<HomePage> {
                             _saveState();
                           },
                           icon: (task.getCompletion())
-                              ? const Icon(Icons.check_box)
-                              : const Icon(Icons.check_box_outline_blank)),
+                              ? const Icon(Icons.check_circle_rounded)
+                              : const Icon(Icons.circle_outlined)),
                       Expanded(
                         child: ListTile(
                           title: Text(
