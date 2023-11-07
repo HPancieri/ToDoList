@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo_list/task.dart';
+import 'package:todo_list/components/task.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
