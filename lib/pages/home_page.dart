@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:todo_list/components/task.dart';
+import 'package:todo_list/pages/task_info.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -136,6 +137,14 @@ class _HomePageState extends State<HomePage> {
                                 : const TextStyle(
                                     decoration: TextDecoration.none),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      TaskInfoPage(task: task)),
+                            );
+                          },
                         ),
                       ),
                       IconButton(
